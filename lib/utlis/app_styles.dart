@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'size_config.dart';
 
 abstract class AppStyles {
+
   static TextStyle styleRegular16(context) {
     return TextStyle(
       color: const Color(0xFF064060),
