@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import '../../models/drawer_item_model.dart';
 import 'drawer_item.dart';
 
-
-class MainDrawerItems extends StatelessWidget {
-  const MainDrawerItems({
+class MainDrawerItemsListView extends StatelessWidget {
+  const MainDrawerItemsListView({
     super.key,
   });
 
@@ -15,13 +14,16 @@ class MainDrawerItems extends StatelessWidget {
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {
-        var drawerItem = DrawerItemModel.getDrawerItems[index];
-        return DrawerItem(drawerItem: drawerItem);
+        var drawerItem = DrawerItemModel.drawerItems[index];
+        return DrawerItem(
+          drawerItem: drawerItem,
+          isActive: true,
+        );
       },
       separatorBuilder: (context, index) => const SizedBox(
-        height: 18,
+        height: 20,
       ),
-      itemCount: DrawerItemModel.getDrawerItems.length,
+      itemCount: DrawerItemModel.drawerItems.length,
     );
   }
 }

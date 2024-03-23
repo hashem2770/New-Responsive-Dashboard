@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,9 +8,11 @@ class DrawerItem extends StatelessWidget {
   const DrawerItem({
     super.key,
     required this.drawerItem,
+    required this.isActive,
   });
 
   final DrawerItemModel drawerItem;
+  final bool isActive;
 
   @override
   Widget build(BuildContext context) {

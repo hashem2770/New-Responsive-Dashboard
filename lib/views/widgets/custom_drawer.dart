@@ -21,7 +21,7 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 20),
-          const MainDrawerItems(),
+          const MainDrawerItemsListView(),
         ],
       ),
     );

@@ -4,12 +4,12 @@ class DrawerItemModel {
   final String label;
   final String icon;
 
-  DrawerItemModel({
+  const DrawerItemModel({
     required this.label,
     required this.icon,
   });
 
-  static List<DrawerItemModel> getDrawerItems = [
+  static const List<DrawerItemModel> drawerItems = [
     DrawerItemModel(
       label: 'Dashboard',
       icon: Assets.imagesDashboard,
