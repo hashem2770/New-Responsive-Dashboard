@@ -19,9 +19,7 @@ class _MainDrawerItemsListViewState extends State<MainDrawerItemsListView> {
   int activeIndex = 0;
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
+    return SliverList.separated(
       itemBuilder: (context, index) {
         var drawerItem = DrawerItemModel.drawerItems[index];
         return InkWell(
@@ -41,7 +39,7 @@ class _MainDrawerItemsListViewState extends State<MainDrawerItemsListView> {
         );
       },
       separatorBuilder: (context, index) => const SizedBox(
-        height: 20,
+        height: 28,
       ),
       itemCount: DrawerItemModel.drawerItems.length,
     );
