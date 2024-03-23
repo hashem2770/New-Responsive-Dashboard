@@ -29,6 +29,12 @@ class ActiveDrawerItem extends StatelessWidget {
             color: const Color(0xff0C359E),
           ),
         ),
+        //todo: did not appear in the screen while development
+        const VerticalDivider(
+          color: Colors.blue,
+          thickness: 2,
+          width: 4,
+        ),
       ],
     );
   }
