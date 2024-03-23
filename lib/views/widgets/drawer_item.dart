@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../models/drawer_item_model.dart';
-import '../../utlis/app_styles.dart';
+import 'active_drawer_item.dart';
+import 'inactive_drawer_item.dart';
 
 class DrawerItem extends StatelessWidget {
   const DrawerItem({
@@ -16,19 +16,8 @@ class DrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(
-          drawerItem.icon,
-        ),
-        const SizedBox(
-          width: 18,
-        ),
-        Text(
-          drawerItem.label,
-          style: AppStyles.styleMedium16(context),
-        ),
-      ],
-    );
+    return isActive
+        ? ActiveDrawerItem(drawerItem: drawerItem)
+        : InActiveDrawerItem(drawerItem: drawerItem);
   }
 }
