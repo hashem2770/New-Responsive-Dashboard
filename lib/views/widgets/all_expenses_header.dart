@@ -17,6 +17,7 @@ class AllExpensesHeader extends StatelessWidget {
           style: AppStyles.styleSemiBold20(context)
               .copyWith(fontWeight: FontWeight.w900),
         ),
+        // does not matter to make clickable as it's check UI for now
         Text(
           "View all",
           style: AppStyles.styleRegular16(context),
