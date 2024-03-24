@@ -12,7 +12,7 @@ class AllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 18),
-      margin: const EdgeInsets.all(8),
+      margin: const EdgeInsets.only(left: 8),
       decoration: BoxDecoration(
         color: allExpensesItemModel.cardColor,
         border: Border.all(color: Colors.grey.shade100, width: 2),

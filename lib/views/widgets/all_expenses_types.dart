@@ -13,16 +13,19 @@ class AllExpensesTypes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        // Balance Widget
         Expanded(
           child: AllExpensesItem(
             allExpensesItemModel: buildAllExpensesBalanceItem(),
           ),
         ),
+        // Income Widget
         Expanded(
           child: AllExpensesItem(
             allExpensesItemModel: buildAllExpensesIncomeItem(),
           ),
         ),
+        // Expenses Widget
         Expanded(
           child: AllExpensesItem(
             allExpensesItemModel: buildAllExpensesExpensesItem(),

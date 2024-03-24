@@ -8,7 +8,8 @@ class AllExpenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 28),
+      padding: const EdgeInsets.symmetric(horizontal: 18),
+      margin: const EdgeInsets.only(top: 18),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -18,7 +19,7 @@ class AllExpenses extends StatelessWidget {
       child: const Column(
         children: [
           AllExpensesHeader(),
-          SizedBox(height: 18),
+          SizedBox(height: 12),
           AllExpensesTypes(),
         ],
       ),
