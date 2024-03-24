@@ -13,7 +13,7 @@ class AllExpensesItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
-      margin: const EdgeInsets.only(left: 8),
+      //margin: const EdgeInsets.only(left: 8),
       decoration: buildBoxDecoration(),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

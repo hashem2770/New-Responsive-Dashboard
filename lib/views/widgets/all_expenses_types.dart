@@ -19,6 +19,9 @@ class _AllExpensesTypesState extends State<AllExpensesTypes> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Row(
+        // could be refactor by making Expandeds in list and iterate over them by :
+        // list.asMap().entries.map((e) => Expanded(...)).toList()
+        // e.key will give the index in order to make the middle widget padding
         children: [
           // Balance Widget
           Expanded(
@@ -34,9 +37,12 @@ class _AllExpensesTypesState extends State<AllExpensesTypes> {
           Expanded(
             child: InkWell(
               onTap: () => setState(() => selectedIndex = 1),
-              child: AllExpensesItem(
-                allExpensesItemModel:
-                    buildAllExpensesIncomeItem(isSelected: selectedIndex == 1),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: AllExpensesItem(
+                  allExpensesItemModel:
+                      buildAllExpensesIncomeItem(isSelected: selectedIndex == 1),
+                ),
               ),
             ),
           ),

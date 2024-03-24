@@ -13,13 +13,13 @@ class DashboardDesktopLayout extends StatelessWidget {
           flex: 1,
           child: CustomDrawer(),
         ),
-        const SizedBox(width: 32),
+        const SizedBox(width: 24),
         Expanded(
           flex: 3,
           child: Column(
             children: [
               const Expanded(
-                flex: 13,
+                flex: 11,
                 child: AllExpenses(),
               ),
               const SizedBox(height: 18),
@@ -30,6 +30,7 @@ class DashboardDesktopLayout extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(width: 24),
         Expanded(flex: 2,child: Container(color: Colors.greenAccent,))
       ],
     );
