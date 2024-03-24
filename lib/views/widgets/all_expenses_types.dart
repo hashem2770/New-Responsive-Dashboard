@@ -15,44 +15,56 @@ class AllExpensesTypes extends StatelessWidget {
       children: [
         Expanded(
           child: AllExpensesItem(
-            allExpensesItemModel: AllExpensesItemModel(
-              label: 'Balance',
-              arrowIconColor: Colors.white70,
-              cardColor: Colors.blue,
-              imagePath: Assets.imagesBalance,
-              iconBackgroundColor: Colors.grey.shade300,
-              moneyColor: Colors.white,
-              labelColor: Colors.white,
-            ),
+            allExpensesItemModel: buildAllExpensesBalanceItem(),
           ),
         ),
         Expanded(
           child: AllExpensesItem(
-            allExpensesItemModel: AllExpensesItemModel(
-              label: 'Income',
-              arrowIconColor: Colors.grey,
-              cardColor: Colors.white,
-              imagePath: Assets.imagesIncome,
-              iconBackgroundColor:Colors.grey.shade200,
-              moneyColor: Colors.blue,
-              labelColor: Colors.blue,
-            ),
+            allExpensesItemModel: buildAllExpensesIncomeItem(),
           ),
         ),
         Expanded(
           child: AllExpensesItem(
-            allExpensesItemModel: AllExpensesItemModel(
-              label: 'Expenses',
-              arrowIconColor: Colors.grey,
-              cardColor: Colors.white,
-              imagePath: Assets.imagesExpenses,
-              iconBackgroundColor: Colors.grey.shade200,
-              moneyColor: Colors.blue,
-              labelColor: Colors.blue,
-            ),
+            allExpensesItemModel: buildAllExpensesExpensesItem(),
           ),
         ),
       ],
     );
+  }
+
+  AllExpensesItemModel buildAllExpensesExpensesItem() {
+    return AllExpensesItemModel(
+            label: 'Expenses',
+            arrowIconColor: Colors.grey,
+            cardColor: Colors.white,
+            imagePath: Assets.imagesExpenses,
+            iconBackgroundColor: Colors.grey.shade200,
+            moneyColor: Colors.blue,
+            labelColor: Colors.blue,
+          );
+  }
+
+  AllExpensesItemModel buildAllExpensesIncomeItem() {
+    return AllExpensesItemModel(
+            label: 'Income',
+            arrowIconColor: Colors.grey,
+            cardColor: Colors.white,
+            imagePath: Assets.imagesIncome,
+            iconBackgroundColor:Colors.grey.shade200,
+            moneyColor: Colors.blue,
+            labelColor: Colors.blue,
+          );
+  }
+
+  AllExpensesItemModel buildAllExpensesBalanceItem() {
+    return AllExpensesItemModel(
+            label: 'Balance',
+            arrowIconColor: Colors.white70,
+            cardColor: Colors.blue,
+            imagePath: Assets.imagesBalance,
+            iconBackgroundColor: Colors.grey.shade300,
+            moneyColor: Colors.white,
+            labelColor: Colors.white,
+          );
   }
 }
