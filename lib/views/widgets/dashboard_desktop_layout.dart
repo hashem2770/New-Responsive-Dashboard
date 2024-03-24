@@ -19,12 +19,12 @@ class DashboardDesktopLayout extends StatelessWidget {
           child: Column(
             children: [
               const Expanded(
-                flex: 8,
+                flex: 13,
                 child: AllExpenses(),
               ),
               const SizedBox(height: 18),
               Expanded(
-                flex: 10,
+                flex: 15,
                 child: Container(color: Colors.amberAccent,),
               )
             ],

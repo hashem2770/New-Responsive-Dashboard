@@ -23,7 +23,7 @@ class AllExpensesHeader extends StatelessWidget {
           // does not matter to make clickable as it's check UI for now
           Text(
             "View all",
-            style: AppStyles.styleRegular16(context),
+            style: AppStyles.styleRegular16(context).copyWith(decoration: TextDecoration.underline),
           ),
         ],
       ),

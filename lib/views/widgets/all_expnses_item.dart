@@ -4,7 +4,8 @@ import 'package:responsive_dashboard/models/all_expnses_item_model.dart';
 import 'package:responsive_dashboard/utlis/app_styles.dart';
 
 class AllExpensesItem extends StatelessWidget {
-  const AllExpensesItem({super.key, required this.allExpensesItemModel});
+  const AllExpensesItem(
+      {super.key, required this.allExpensesItemModel});
 
   final AllExpensesItemModel allExpensesItemModel;
 
@@ -13,11 +14,7 @@ class AllExpensesItem extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 18),
       margin: const EdgeInsets.only(left: 8),
-      decoration: BoxDecoration(
-        color: allExpensesItemModel.cardColor,
-        border: Border.all(color: Colors.grey.shade100, width: 2),
-        borderRadius: BorderRadius.circular(12),
-      ),
+      decoration: buildBoxDecoration(),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,9 +41,7 @@ class AllExpensesItem extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 28,
-          ),
+          const SizedBox(height: 28),
           Text(
             allExpensesItemModel.label,
             style: AppStyles.styleSemiBold18(context).copyWith(
@@ -54,16 +49,12 @@ class AllExpensesItem extends StatelessWidget {
               fontWeight: FontWeight.w800,
             ),
           ),
-          const SizedBox(
-            height: 4,
-          ),
+          const SizedBox(height: 4),
           Text(
             "April 2024",
             style: AppStyles.styleRegular12(context),
           ),
-          const SizedBox(
-            height: 12,
-          ),
+          const SizedBox(height: 12),
           Text(
             "\$ 5,000 ",
             style: AppStyles.styleSemiBold24(context).copyWith(
@@ -72,6 +63,14 @@ class AllExpensesItem extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  BoxDecoration buildBoxDecoration() {
+    return BoxDecoration(
+      color: allExpensesItemModel.cardColor,
+      border: Border.all(color: Colors.grey.shade100, width: 2),
+      borderRadius: BorderRadius.circular(12),
     );
   }
 }
