@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/utlis/app_styles.dart';
-
+import 'package:responsive_dashboard/models/all_expnses_item_model.dart';
+import '../../utlis/app_images.dart';
 import 'all_expenses_header.dart';
+import 'all_expnses_item.dart';
 
 class AllExpenses extends StatelessWidget {
   const AllExpenses({super.key});
@@ -9,7 +10,7 @@ class AllExpenses extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 28),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -18,7 +19,51 @@ class AllExpenses extends StatelessWidget {
       ),
       child: Column(
         children: [
-          AllExpensesHeader(),
+          const AllExpensesHeader(),
+          const SizedBox(height: 18),
+          Row(
+            children: [
+              Expanded(
+                child: AllExpensesItem(
+                  allExpensesItemModel: AllExpensesItemModel(
+                    label: 'Balance',
+                    arrowIconColor: Colors.white70,
+                    cardColor: Colors.blue,
+                    imagePath: Assets.imagesBalance,
+                    iconBackgroundColor: Colors.grey.shade300,
+                    moneyColor: Colors.white,
+                    labelColor: Colors.white,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: AllExpensesItem(
+                  allExpensesItemModel: AllExpensesItemModel(
+                    label: 'Income',
+                    arrowIconColor: Colors.grey,
+                    cardColor: Colors.white,
+                    imagePath: Assets.imagesIncome,
+                    iconBackgroundColor:Colors.grey.shade200,
+                    moneyColor: Colors.blue,
+                    labelColor: Colors.blue,
+                  ),
+                ),
+              ),
+              Expanded(
+                child: AllExpensesItem(
+                  allExpensesItemModel: AllExpensesItemModel(
+                    label: 'Expenses',
+                    arrowIconColor: Colors.grey,
+                    cardColor: Colors.white,
+                    imagePath: Assets.imagesExpenses,
+                    iconBackgroundColor: Colors.grey.shade200,
+                    moneyColor: Colors.blue,
+                    labelColor: Colors.blueAccent,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ],
       ),
     );
