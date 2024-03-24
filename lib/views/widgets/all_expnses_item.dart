@@ -22,6 +22,7 @@ class AllExpensesItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // could be extracted into a widget
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -29,13 +30,11 @@ class AllExpensesItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: allExpensesItemModel.iconBackgroundColor,
-
                 ),
                 child: Container(
                   padding: const EdgeInsets.all(8),
                   child: SvgPicture.asset(
                     allExpensesItemModel.imagePath,
-
                   ),
                 ),
               ),

@@ -10,7 +10,7 @@ class AllExpensesItemModel {
   final String label;
 
 
-  AllExpensesItemModel( {
+  const AllExpensesItemModel( {
     required this.labelColor,
     required this.moneyColor,
     required this.iconBackgroundColor,
