@@ -10,18 +10,24 @@ class AllExpenses extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       margin: const EdgeInsets.only(top: 18),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
+      decoration: buildShapeDecoration(),
       child: const Column(
         children: [
           AllExpensesHeader(),
           SizedBox(height: 12),
           AllExpensesTypes(),
+          SizedBox(height: 8,),
+
         ],
+      ),
+    );
+  }
+
+  ShapeDecoration buildShapeDecoration() {
+    return ShapeDecoration(
+      color: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
       ),
     );
   }

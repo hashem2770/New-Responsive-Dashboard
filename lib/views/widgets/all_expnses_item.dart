@@ -12,11 +12,10 @@ class AllExpensesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 28, horizontal: 18),
+      padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 18),
       margin: const EdgeInsets.only(left: 8),
       decoration: buildBoxDecoration(),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // could be extracted into a widget
@@ -41,7 +40,7 @@ class AllExpensesItem extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 28),
+          const SizedBox(height: 24),
           Text(
             allExpensesItemModel.label,
             style: AppStyles.styleSemiBold18(context).copyWith(
@@ -54,10 +53,10 @@ class AllExpensesItem extends StatelessWidget {
             "April 2024",
             style: AppStyles.styleRegular12(context),
           ),
-          const SizedBox(height: 12),
+        Spacer(),
           Text(
             "\$ 5,000 ",
-            style: AppStyles.styleSemiBold24(context).copyWith(
+            style: AppStyles.styleSemiBold20(context).copyWith(
               color: allExpensesItemModel.moneyColor,
             ),
           ),
