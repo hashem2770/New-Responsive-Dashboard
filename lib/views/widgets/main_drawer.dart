@@ -32,9 +32,13 @@ class _MainDrawerItemsListViewState extends State<MainDrawerItemsListView> {
               });
             }
           },
-          child: DrawerItem(
-            drawerItem: drawerItem,
-            isActive: activeIndex == index,
+          child: FittedBox(
+            alignment: Alignment.centerLeft,
+            fit: BoxFit.scaleDown,
+            child: DrawerItem(
+              drawerItem: drawerItem,
+              isActive: activeIndex == index,
+            ),
           ),
         );
       },

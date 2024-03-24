@@ -13,19 +13,23 @@ class InActiveDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(
-          drawerItem.icon,
-        ),
-        const SizedBox(
-          width: 18,
-        ),
-        Text(
-          drawerItem.label,
-          style: AppStyles.styleMedium16(context),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          SvgPicture.asset(
+            drawerItem.icon,
+          ),
+          const SizedBox(
+            width: 18,
+          ),
+          Text(
+            drawerItem.label,
+            style: AppStyles.styleMedium16(context),
+          ),
+        ],
+      ),
     );
   }
 }

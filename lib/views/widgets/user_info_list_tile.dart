@@ -17,13 +17,13 @@ class UserInfoListTile extends StatelessWidget {
         userInfoListTileModel.icon,
         ),
         title:  Text(
-          userInfoListTileModel.label,
-          style: AppStyles.styleSemiBold16(context),
+          userInfoListTileModel.label,maxLines: 1,
+          style: AppStyles.styleSemiBold16(context).copyWith(overflow: TextOverflow.ellipsis),
 
         ),
         subtitle: Text(
-          userInfoListTileModel.email,
-          style: AppStyles.styleRegular12(context),
+          userInfoListTileModel.email,maxLines: 1,
+          style: AppStyles.styleRegular12(context).copyWith(overflow: TextOverflow.ellipsis),
         ),
       ),
     );

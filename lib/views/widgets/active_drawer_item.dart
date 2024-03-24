@@ -14,28 +14,35 @@ class ActiveDrawerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        SvgPicture.asset(
-          drawerItem.icon,
-        ),
-        const SizedBox(
-          width: 18,
-        ),
-        Text(
-          drawerItem.label,
-          style: AppStyles.styleSemiBold16(context).copyWith(
-            fontWeight: FontWeight.w900,
-            color: const Color(0xff0C359E),
+    return Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Row(
+        children: [
+          SvgPicture.asset(
+            drawerItem.icon,
           ),
-        ),
-        //todo: did not appear in the screen while development
-        const VerticalDivider(
-          color: Colors.blue,
-          thickness: 2,
-          width: 4,
-        ),
-      ],
+          const SizedBox(
+            width: 14,
+          ),
+          Text(
+            drawerItem.label,
+            maxLines: 1,
+            textAlign:TextAlign.left,
+            style: AppStyles.styleSemiBold16(context).copyWith(
+              fontWeight: FontWeight.w900,
+              color: const Color(0xff0C359E),
+              overflow: TextOverflow.ellipsis,
+
+            ),
+          ),
+          //todo: did not appear in the screen while development
+          const VerticalDivider(
+            color: Colors.blue,
+            thickness: 2,
+            width: 4,
+          ),
+        ],
+      ),
     );
   }
 }

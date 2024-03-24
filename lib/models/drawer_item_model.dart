@@ -11,7 +11,7 @@ class DrawerItemModel {
 
   static const List<DrawerItemModel> drawerItems = [
     DrawerItemModel(
-      label: 'Dashboard',
+      label: 'My Dashboard',
       icon: Assets.imagesDashboard,
     ),
     DrawerItemModel(
@@ -19,7 +19,7 @@ class DrawerItemModel {
       icon: Assets.imagesMyTransctions,
     ),
     DrawerItemModel(
-      label: 'Statistics',
+      label: 'My Statistics     ',
       icon: Assets.imagesStatistics,
     ),
     DrawerItemModel(
