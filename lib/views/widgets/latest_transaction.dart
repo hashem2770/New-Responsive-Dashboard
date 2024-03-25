@@ -22,9 +22,11 @@ class LatestTransactionSection extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: LatestTransactionModel.latestTransactions
-                .map((e) => IntrinsicWidth(
-              child: LatestTransactionItem(client: e),
-            ))
+                .map(
+                  (e) => IntrinsicWidth(
+                    child: LatestTransactionItem(client: e),
+                  ),
+                )
                 .toList(),
           ),
         )
@@ -32,3 +34,18 @@ class LatestTransactionSection extends StatelessWidget {
     );
   }
 }
+
+/*
+*  SizedBox(
+          height: 70,
+          width: MediaQuery.of(context).size.width * 0.5,
+          child: ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (context, index) {
+              var client = LatestTransactionModel.latestTransactions[index];
+              return LatestTransactionItem(client: client);
+            },
+            separatorBuilder: (context, index) => const SizedBox(width: 8),
+            itemCount: LatestTransactionModel.latestTransactions.length,
+          ),
+        ),*/

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/helper/methods/container_decoration.dart';
 import 'package:responsive_dashboard/views/widgets/quick_invoice_header.dart';
+import 'package:responsive_dashboard/views/widgets/text_field_section.dart';
 
 import 'latest_transaction.dart';
 
@@ -21,25 +22,13 @@ class QuickInvoice extends StatelessWidget {
           QuickInvoiceHeader(),
           SizedBox(height: 12),
           LatestTransactionSection(),
+          Divider(
+            thickness: 1,
+            height: 32,
+          ),
+          TextFieldsSection(),
         ],
       ),
     );
   }
 }
-
-
-
-/*
-*  SizedBox(
-          height: 70,
-          width: MediaQuery.of(context).size.width * 0.5,
-          child: ListView.separated(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              var client = LatestTransactionModel.latestTransactions[index];
-              return LatestTransactionItem(client: client);
-            },
-            separatorBuilder: (context, index) => const SizedBox(width: 8),
-            itemCount: LatestTransactionModel.latestTransactions.length,
-          ),
-        ),*/
