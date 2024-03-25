@@ -53,7 +53,7 @@ class AllExpensesItem extends StatelessWidget {
             "April 2024",
             style: AppStyles.styleRegular12(context),
           ),
-        Spacer(),
+        const Spacer(),
           Text(
             "\$ 5,000 ",
             style: AppStyles.styleSemiBold20(context).copyWith(
