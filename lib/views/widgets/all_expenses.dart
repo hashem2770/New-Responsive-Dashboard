@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../helper/methods/container_decoration.dart';
 import 'all_expenses_header.dart';
 import 'all_expenses_types.dart';
 
@@ -17,17 +18,7 @@ class AllExpenses extends StatelessWidget {
           SizedBox(height: 12),
           AllExpensesTypes(),
           SizedBox(height: 8,),
-
         ],
-      ),
-    );
-  }
-
-  ShapeDecoration buildShapeDecoration() {
-    return ShapeDecoration(
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
       ),
     );
   }

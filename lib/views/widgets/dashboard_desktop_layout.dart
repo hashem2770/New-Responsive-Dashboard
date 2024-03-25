@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/widgets/all_expenses.dart';
 import 'package:responsive_dashboard/views/widgets/custom_drawer.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -25,7 +26,7 @@ class DashboardDesktopLayout extends StatelessWidget {
               const SizedBox(height: 18),
               Expanded(
                 flex: 15,
-                child: Container(color: Colors.amberAccent,),
+                child: QuickInvoice(),
               )
             ],
           ),
