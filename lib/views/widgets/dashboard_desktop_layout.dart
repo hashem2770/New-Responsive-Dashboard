@@ -15,15 +15,15 @@ class DashboardDesktopLayout extends StatelessWidget {
           child: CustomDrawer(),
         ),
         const SizedBox(width: 24),
-        Expanded(
+        const Expanded(
           flex: 3,
           child: Column(
             children: [
-              const Expanded(
+              Expanded(
                 flex: 11,
                 child: AllExpenses(),
               ),
-              const SizedBox(height: 18),
+              SizedBox(height: 18),
               Expanded(
                 flex: 15,
                 child: QuickInvoice(),
