@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/helper/methods/container_decoration.dart';
+import 'package:responsive_dashboard/views/widgets/quick_invoice_buttons.dart';
 import 'package:responsive_dashboard/views/widgets/quick_invoice_header.dart';
 import 'package:responsive_dashboard/views/widgets/text_field_section.dart';
 
@@ -27,6 +28,8 @@ class QuickInvoice extends StatelessWidget {
             height: 32,
           ),
           TextFieldsSection(),
+          SizedBox(height: 18),
+          QuickInvoiceButtons(),
         ],
       ),
     );
