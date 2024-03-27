@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/my_cards_section.dart';
 import 'package:responsive_dashboard/views/widgets/custom_drawer.dart';
-import 'package:responsive_dashboard/views/widgets/dot_indicator.dart';
-import 'package:responsive_dashboard/views/widgets/my_cards_page_view.dart';
 import '../all_expenses_and_quick_invoice_section.dart';
-import 'custom_dot.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
