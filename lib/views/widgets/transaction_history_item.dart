@@ -24,7 +24,7 @@ class TransactionHistoryItem extends StatelessWidget {
       child: ListTile(
         title: Text(
           title,
-          style: AppStyles.styleBold16(context),
+          style: AppStyles.styleSemiBold16(context),
         ),
         subtitle: Text(date),
         trailing: Text(

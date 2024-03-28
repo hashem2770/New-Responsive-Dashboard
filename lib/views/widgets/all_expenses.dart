@@ -10,7 +10,7 @@ class AllExpenses extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 18),
-      margin: const EdgeInsets.only(top: 18),
+      margin: const EdgeInsets.only(top: 4),
       decoration: buildShapeDecoration(),
       child: const Column(
         children: [

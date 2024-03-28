@@ -11,7 +11,7 @@ class MyCardsAndTransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: const EdgeInsets.only(top: 18),
+        margin: const EdgeInsets.only(top: 4),
         padding: const EdgeInsets.symmetric(horizontal: 14.0),
         decoration: BoxDecoration(
           color: Colors.white,
@@ -19,7 +19,7 @@ class MyCardsAndTransactionHistory extends StatelessWidget {
         ),
         child: const Column(
           children: [
-            SizedBox(height: 24),
+            SizedBox(height: 14),
             MyCardsSection(),
             SizedBox(height: 24),
             TransactionHistory(),
